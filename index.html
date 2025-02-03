@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیش‌نمایش تینت شیشه ماشین</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- هدر و توضیحات -->
+        <header>
+            <h1>شبیه‌ساز تینت شیشه ماشین</h1>
+            <p>ناحیه شیشه را انتخاب کرده و تاریکی را تنظیم کنید!</p>
+        </header>
+
+        <!-- پیش‌نمایش دوربین و تینت -->
+        <div class="preview-wrapper">
+            <video id="cameraFeed" autoplay playsinline></video>
+            <canvas id="tintCanvas"></canvas>
+            <div id="selectionBox"></div>
+        </div>
+
+        <!-- کنترل‌ها -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="tintSlider">میزان تاریکی: <span id="tintValue">50%</span></label>
+                <input type="range" id="tintSlider" min="10" max="90" value="50" step="5">
+            </div>
+            <button id="simulateBtn" class="btn">حالت داخل ماشین</button>
+            <button id="resetBtn" class="btn">شروع مجدد</button>
+        </div>
+
+        <!-- QR Code برای اشتراک‌گذاری -->
+        <div class="qr-section">
+            <p>اسکن کنید برای اشتراک‌گذاری:</p>
+            <img src="assets/qr-code.png" alt="QR Code">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
